@@ -79,7 +79,7 @@ def create_app():
             if (season >=2018):
                 subtitle = DISCLAIMER
             else:
-                subtitle = DISCLAIMER + ' ' + OLD_ALIGNMENT_MESSAGE
+                subtitle = DISCLAIMER + ' '
 
         elif report_generator == 'bokeh':
             url_params = {
