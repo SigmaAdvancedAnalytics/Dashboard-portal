@@ -36,17 +36,16 @@ def create_app():
 
         # CONFIG
         #----------------------------------------------------
-        TABLEAU_URL = "https://reports2.agconnect.org"
+        TABLEAU_URL = "https://reports2..org"
 
         # Base URLs for different results generators
         BASE_URLS = {
-            'tableau' : "https://reports2.agconnect.org",
-            'bokeh' : "http://gitlab.services.kenna.local"
+            'tableau' : "https://reports2.org",
+            'bokeh' : "http://gitlab.services.local"
         }
 
         # Used for building the report subtitle
-        DISCLAIMER = "The data provided in this report is for internal BASF use only and not for external distribution."
-        OLD_ALIGNMENT_MESSAGE = "This report is configured to use the pre-2018 territory alignment."
+        DISCLAIMER = ""
 
 
         # Post request parameters
@@ -84,8 +83,8 @@ def create_app():
 
         elif report_generator == 'bokeh':
             url_params = {
-                'base_url': 'http://reports.services.kenna.local',
-                #'base_url': 'http://gitlab.services.kenna.local', 
+                'base_url': 'http://reports.services.local',
+                #'base_url': 'http://gitlab.services.local', 
                 'report_name': report_name,
                 'expiry': int(time.time()) + TOKEN_LIFETIME
             }
